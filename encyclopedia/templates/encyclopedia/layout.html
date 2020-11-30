@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
+      <link rel="shortcut icon" href="{% static 'encyclopedia/Wiki.png' %}">
+      <script src="https://kit.fontawesome.com/b823e91163.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="row">
+         <div class="sidebar col-lg-2 col-md-3">
+            <li><img class="logo" src="{% static 'encyclopedia/Wiki.png' %}"></li>
+            <a class="navbar-brand" href="{% url 'index' %}">
+               <h2>Wiki</h2>
+            </a>
+            <form action="{% url 'search_results'  %}" method="GET" class="search">
+               <input name="search" type="text" class="search" placeholder="Search Encyclopedia">
+               <button type="submit" class="go"><i class="fas fa-search"></i></button>
+            </form>
+            <div>
+               <a href="{% url 'index' %}">Home</a>
+            </div>
+            <div>
+               <a href="{% url 'create' %}">Create New Page</a>
+            </div>
+            <div>
+               <a href="{% url 'random' %}">Random Page</a>
+            </div>
+            {% block nav %}
+            {% endblock %}
+         </div>
+         <div class="main col-md-9">
+            {% block body %}
+            {% endblock %}
+         </div>
+      </div>
+   </body>
+</html>

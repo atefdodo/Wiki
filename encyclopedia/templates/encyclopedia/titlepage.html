@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+
+{{title}}
+
+{% endblock %}
+{% block body %}
+
+{% load md %}
+
+<form action="{% url 'edit'  %}" method = "POST">
+   {% csrf_token %}
+
+   {% with pagename=title %}
+
+   <div class="col">
+      <button type="submit" class="butedit" name = "edit" value="{{pagename}}" id ="edit">Edit</button>
+   </div>
+   {%endwith%}
+
+   <h1 class="display-4 text-secondary">{{title}}</h1>
+</form>
+{{ content|markdown|safe }}
+
+{% endblock %}
