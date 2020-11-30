@@ -2,7 +2,7 @@
 
 ![](https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/200px-Wiki_letter_w.svg.png )
 
-[![](https://img.shields.io/badge/author-@atefdodo-blue.svg?style=flat)](https://github.com/atefdodo)    ![](https://img.shields.io/badge/build-HTML5-red.svg?style=flat) [![](https://img.shields.io/badge/Valid-W3C_CSS-green.svg?style=flat)](http://jigsaw.w3.org/css-validator) ![](https://img.shields.io/badge/build-font_awasome-blueviolet.svg?style=flat)   ![](https://img.shields.io/badge/Python-v 3.1.3-blue.svg?style=flat)   ![](https://img.shields.io/pypi/djversions/djangorestframework)
+[![](https://img.shields.io/badge/author-@atefdodo-blue.svg?style=flat)](https://github.com/atefdodo)    ![](https://img.shields.io/badge/build-HTML5-red.svg?style=flat) [![](https://img.shields.io/badge/Valid-W3C_CSS-green.svg?style=flat)](http://jigsaw.w3.org/css-validator) ![](https://img.shields.io/badge/build-font_awasome-blueviolet.svg?style=flat)    ![](https://img.shields.io/badge/Python-v%203.1.3-blue.svg?style=flat)   ![](https://img.shields.io/pypi/djversions/djangorestframework)
 
 **> Design a Wikipedia-like online encyclopedia.**
 
@@ -58,7 +58,3 @@ Clicking “Random Page” in the sidebar should take user to a random encyclope
   ```
 I tried using python-markdown2 but still have a bug type" object 'Markdown' has no attribute 'markdown' " so I manage to find alternative way by using templatetags inside the project itself.
  ```
-# Wiki
-# Wiki
-# Wiki
-# Wiki
